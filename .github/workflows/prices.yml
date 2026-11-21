@@ -50,3 +50,20 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # GitHub выключает расписание в публичном репозитории, если в нём 60 дней нет активности.
+  # Раз в месяц (1-го числа) пустой коммит от бота - расписание не отключится никогда.
+  keepalive:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Пустой коммит раз в месяц
+        run: |
+          if [ "$(date -u +%d)" != "01" ]; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "keepalive $(date -u +%Y-%m)"
+          git push

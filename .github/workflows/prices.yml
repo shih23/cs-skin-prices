@@ -1,0 +1,52 @@
+# Раз в сутки (после обновления prices.csgotrader.app ~10:25 UTC) считает цены скинов
+# и выкладывает prices.json + history.json на GitHub Pages. В git цены не коммитятся:
+# прошлую историю берём с самого сайта, поэтому репозиторий не растёт.
+name: prices
+
+on:
+  schedule:
+    - cron: "40 10 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install brotli
+      - name: Прошлая история с сайта
+        run: |
+          mkdir -p site
+          curl -sfL --compressed -o site/history.json "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/history.json" || rm -f site/history.json
+      - name: Цены
+        run: python live_prices.py --list skins.json --out site --history
+      - name: Сайт
+        run: |
+          rm -rf site/src
+          cp README.md site/index.md 2>/dev/null || true
+          touch site/.nojekyll
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

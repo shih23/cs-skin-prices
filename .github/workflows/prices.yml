@@ -36,6 +36,7 @@ jobs:
         run: |
           rm -rf site/src
           cp README.md site/index.md 2>/dev/null || true
+          cp privacy.html site/privacy.html
           touch site/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -21,7 +21,7 @@
 <!-- Исходник: docs/legal/privacy.html проекта игры. Публикуется в репозитории shih23/cs-skin-prices (docs/legal.md). -->
 
 <h1>Chill Case Simulator - политика конфиденциальности</h1>
-<p class="date">Действует с 23.11.2026</p>
+<p class="date">Действует с 24.11.2026</p>
 <p class="lang"><a href="#en">English version below</a></p>
 
 <h2>Кто мы</h2>
@@ -32,16 +32,27 @@ Gera Int. Studios (Германия). Вопросы о данных и прос
 <ul>
 	<li>Игра не просит имя, почту, телефон, контакты, местоположение и платёжные данные.</li>
 	<li>В игре нет рекламы, покупок, аналитики и трекеров. Мы не продаём и не передаём данные для рекламы.</li>
-	<li>Весь прогресс (сатоши, предметы, звание, настройки) хранится только на твоём устройстве.</li>
-	<li>Если работает онлайн (друзья, лента дропов, батлы, рейтинг), на наш сервер уходят игровой профиль и ID устройства.</li>
+	<li>Прогресс (сатоши, предметы, звание, настройки) хранится на твоём устройстве, а при работающем онлайне его копия -
+		в облачном сохранении на нашем сервере (чтобы вернуть прогресс после переустановки или на новом телефоне).</li>
+	<li>Если работает онлайн (друзья, лента дропов, батлы, рейтинг, облако), на наш сервер уходят игровой профиль, ID
+		устройства и облачное сохранение.</li>
+	<li>Вход через Google - по желанию: сервер хранит только идентификатор Google-аккаунта, без имени, почты и фото.</li>
 	<li>Онлайн-аккаунт удаляется в самой игре: Настройки → Онлайн → «Удалить онлайн-аккаунт».</li>
 </ul>
 
 <h2>Какие данные и зачем</h2>
 <table>
 	<tr><th>Данные</th><th>Где</th><th>Зачем</th></tr>
-	<tr><td>Сохранение игры и настройки</td><td>Только на устройстве</td><td>Чтобы игра помнила прогресс. На сервер не отправляется.
-		«Код сохранения» игрок копирует и переносит сам.</td></tr>
+	<tr><td>Сохранение игры и настройки</td><td>На устройстве</td><td>Чтобы игра помнила прогресс. «Код сохранения» игрок
+		копирует и переносит сам.</td></tr>
+	<tr><td>Облачное сохранение: копия сохранения игры, время записи, ник, звание, сатоши, число предметов, время в игре</td>
+		<td>Сервер игры, другим игрокам не видно</td><td>Вернуть прогресс после переустановки игры или на новом устройстве
+		(«Код переноса», вход через Google). Пишется само при работающем онлайне, раз в несколько минут.</td></tr>
+	<tr><td>Код переноса (8 знаков)</td><td>Сервер игры</td><td>Перенос прогресса на новое устройство; живёт 15 минут и
+		удаляется после использования.</td></tr>
+	<tr><td>Идентификатор Google-аккаунта (только если ты сам нажал «Google-аккаунт» в Настройках)</td><td>Сервер игры</td>
+		<td>Найти твой прогресс на новом телефоне. Google передаёт при входе имя, почту и фото - игра их не сохраняет:
+		сервер стирает имя и фото сразу после входа, почта не записывается.</td></tr>
 	<tr><td>ID устройства (Android ID или случайный номер, если его нет)</td><td>Сервер игры</td><td>Вход в онлайн без
 		пароля: по нему сервер узнаёт твой аккаунт.</td></tr>
 	<tr><td>Игровой профиль: ник, аватар (игровой агент), звание, число открытых кейсов, стоимость инвентаря, лучший и
@@ -58,21 +69,24 @@ Gera Int. Studios (Германия). Вопросы о данных и прос
 </table>
 <p>Раз в день игра скачивает файл цен скинов с GitHub Pages (<code>shih23.github.io</code>). Личных данных игра при этом не
 отправляет; GitHub, как любой сайт, видит IP-адрес запроса (<a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">политика GitHub</a>).</p>
-<p>Основание (GDPR): ст. 6(1)(b) - чтобы работали онлайн-функции, которыми ты пользуешься; ст. 6(1)(f) - технические
-журналы и защита от злоупотреблений.</p>
+<p>Вход через Google работает через сервисы Google (<a href="https://policies.google.com/privacy">политика Google</a>).
+Окно оценки игры показывает сам Google Play; игра при этом данных не отправляет.</p>
+<p>Основание (GDPR): ст. 6(1)(b) - чтобы работали онлайн-функции, которыми ты пользуешься (в том числе облачное
+сохранение и вход через Google); ст. 6(1)(f) - технические журналы и защита от злоупотреблений.</p>
 
 <h2>Кто ещё видит данные</h2>
 <p>Другие игроки видят ник, профиль, дропы в ленте и места в рейтинге. Сервер игры работает у хостинг-провайдера,
 который хранит данные по нашему поручению. Больше никому данные не передаются, кроме случаев, когда этого требует закон.</p>
 
 <h2>Сколько храним</h2>
-<p>Онлайн-профиль и друзья - пока ты не удалишь онлайн-аккаунт. Дропы в ленте вытесняются новыми (последние 50).
+<p>Онлайн-профиль, друзья, облачное сохранение и привязка Google - пока ты не удалишь онлайн-аккаунт. Дропы в ленте
+вытесняются новыми (последние 50). Код переноса - до 15 минут.
 Жалобы на игрока - пока его онлайн-аккаунт не удалён. Технические журналы - не дольше 30 дней.</p>
 
 <h2>Удаление и твои права</h2>
 <ul>
 	<li>Онлайн-аккаунт: Настройки → Онлайн → «Удалить онлайн-аккаунт». С сервера сразу удаляются профиль, код друга, друзья,
-		заявки, твои дропы в ленте и строки рейтинга. Если игры уже нет - напиши на <a href="mailto:gera.int.studios@gmail.com">gera.int.studios@gmail.com</a>
+		заявки, твои дропы в ленте, строки рейтинга, облачное сохранение и привязка Google. Если игры уже нет - напиши на <a href="mailto:gera.int.studios@gmail.com">gera.int.studios@gmail.com</a>
 		свой ник и код друга.</li>
 	<li>Данные на устройстве: Настройки → «Сбросить данные» или удалить игру.</li>
 	<li>По GDPR ты можешь запросить доступ к данным, исправление, удаление, ограничение обработки, перенос данных,
@@ -91,8 +105,8 @@ Gera Int. Studios (Германия). Вопросы о данных и прос
 
 <hr>
 
-<h1 id="en">KAIFOVIY OPENCASER - Privacy Policy</h1>
-<p class="date">Effective 23 November 2026</p>
+<h1 id="en">Chill Case Simulator - Privacy Policy</h1>
+<p class="date">Effective 24 November 2026</p>
 
 <h2>Who we are</h2>
 <p>The game «Chill Case Simulator» (Android, package <code>com.geraint.chillcase</code>) is made by an independent developer,
@@ -103,14 +117,26 @@ Gera Int. Studios (Germany). Questions and deletion requests: <a href="mailto:ge
 	<li>The game does not ask for your name, email, phone number, contacts, location or payment details.</li>
 	<li>No ads, no in-app purchases, no analytics, no trackers. We do not sell or share data for advertising.</li>
 	<li>All progress (coins, items, rank, settings) is stored only on your device.</li>
-	<li>When online features are used (friends, drop feed, battles, leaderboards), your game profile and a device ID are sent to our server.</li>
+	<li>Your progress is stored on your device and, while online features work, a copy is kept as a cloud save on our
+		server (to restore progress after reinstalling or on a new phone).</li>
+	<li>When online features are used (friends, drop feed, battles, leaderboards, cloud save), your game profile, a device ID
+		and the cloud save are sent to our server.</li>
+	<li>Google sign-in is optional: the server keeps only your Google account identifier - no name, email or photo.</li>
 	<li>You can delete your online account in the game: Settings → Online → «Удалить онлайн-аккаунт» (Delete online account).</li>
 </ul>
 
 <h2>What data and why</h2>
 <table>
 	<tr><th>Data</th><th>Where</th><th>Purpose</th></tr>
-	<tr><td>Save game and settings</td><td>Device only</td><td>Keeps your progress. Never sent to the server; the «save code» is copied and moved by the player.</td></tr>
+	<tr><td>Save game and settings</td><td>Device</td><td>Keeps your progress. The «save code» is copied and moved by the player.</td></tr>
+	<tr><td>Cloud save: a copy of the save game, save time, nickname, rank, satoshi, item count, play time</td><td>Game
+		server, not visible to other players</td><td>Restoring progress after reinstalling or on a new device («Transfer code»,
+		Google sign-in). Written automatically every few minutes while online.</td></tr>
+	<tr><td>Transfer code (8 characters)</td><td>Game server</td><td>Moving progress to a new device; valid for 15 minutes
+		and deleted once used.</td></tr>
+	<tr><td>Google account identifier (only if you tapped «Google account» in Settings)</td><td>Game server</td><td>Finding
+		your progress on a new phone. Google provides your name, email and photo at sign-in - the game does not keep them:
+		the server erases name and photo right after sign-in, the email is not stored.</td></tr>
 	<tr><td>Device ID (Android ID, or a random number if unavailable)</td><td>Game server</td><td>Password-less sign-in to online features.</td></tr>
 	<tr><td>Game profile: nickname, avatar (in-game agent), rank, cases opened, inventory value, best and last drop,
 		showcase, medals, game statistics</td><td>Game server, visible to other players</td><td>Friends' profiles, leaderboards.</td></tr>
@@ -125,20 +151,24 @@ Gera Int. Studios (Germany). Questions and deletion requests: <a href="mailto:ge
 </table>
 <p>Once a day the game downloads a skin price file from GitHub Pages (<code>shih23.github.io</code>). No personal data is sent;
 like any website, GitHub sees the request's IP address (<a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a>).</p>
-<p>Legal basis (GDPR): Art. 6(1)(b) - to provide the online features you use; Art. 6(1)(f) - technical logs and abuse prevention.</p>
+<p>Google sign-in uses Google services (<a href="https://policies.google.com/privacy">Google Privacy Policy</a>). The
+in-game rating window is shown by Google Play itself; the game sends no data for it.</p>
+<p>Legal basis (GDPR): Art. 6(1)(b) - to provide the online features you use (including cloud save and Google sign-in);
+Art. 6(1)(f) - technical logs and abuse prevention.</p>
 
 <h2>Who else sees the data</h2>
 <p>Other players see your nickname, profile, feed drops and leaderboard positions. The game server runs at a hosting
 provider that stores data on our behalf. Data is not shared with anyone else unless required by law.</p>
 
 <h2>Retention</h2>
-<p>Online profile and friends: until you delete your online account. Feed drops are pushed out by newer ones (latest 50).
+<p>Online profile, friends, cloud save and Google link: until you delete your online account. Feed drops are pushed out
+by newer ones (latest 50). Transfer code: up to 15 minutes.
 Reports about a player: until that player's online account is deleted. Technical logs: no longer than 30 days.</p>
 
 <h2>Deletion and your rights</h2>
 <ul>
 	<li>Online account: Settings → Online → «Удалить онлайн-аккаунт». The profile, friend code, friends, requests, your feed
-		drops and leaderboard entries are removed from the server immediately. If the game is no longer installed, email
+		drops, leaderboard entries, cloud save and Google link are removed from the server immediately. If the game is no longer installed, email
 		<a href="mailto:gera.int.studios@gmail.com">gera.int.studios@gmail.com</a> with your nickname and friend code.</li>
 	<li>Data on the device: Settings → «Сбросить данные» (Reset data), or uninstall the game.</li>
 	<li>Under the GDPR you have the right to access, rectification, erasure, restriction, data portability, to object, and to
